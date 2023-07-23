@@ -9,7 +9,7 @@ app.use(express.json());
 app.use("/api/v1",routes);
 app.listen(port,()=>
 {
-    console.log(`hi darshan soni`);
+    console.log(`hi darshan soni${port}`);
 });
 db_connect();
 
