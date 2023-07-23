@@ -5,18 +5,18 @@ const deleteblogs=require("../controllers/deleteblogs");
 const {like}=require("../controllers/like");
 const {unlike}=require("../controllers/unlike");
 const {createcomment}=require("../controllers/createcomment");
-const {removecomment}=require("../controllers/removecomment");
+const {deletecomment}=require("../controllers/deletecomment");
 const express = require('express');
 const router = express.Router();
 
-router.get("/getblogs",getblogs);
-router.put("/updateblogs",updateblogs);
-router.post("/createroute",createroute);
-router.delete("/deleteblogs",deleteblogs);
-router.put("/like/:id",like);
-router.put("/unlike/:id",unlike);
+// router.get("/getblogs",getblogs);
+// router.put("/updateblogs",updateblogs);
+// router.post("/createroute",createroute);
+// router.delete("/deleteblogs",deleteblogs);
+// router.put("/like/:id",like);
+// router.put("/unlike/:id",unlike);
 
-router.post("/removecomment",removecomment);
-router.get("/createcomment",createcomment);
+// router.post("/deletecomment",deletecomment);
+// router.get("/createcomment",createcomment);
 
 module.exports=router;
