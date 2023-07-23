@@ -6,7 +6,7 @@ const {db_connect}=require("./config/database");
 const port=process.env.port||4000
 const routes=require("./routes/blogroutes");
 app.use(express.json());
-app.use(routes);
+app.use("/api/v1",routes);
 app.listen(port,()=>
 {
     console.log(`hi darshan soni`);
