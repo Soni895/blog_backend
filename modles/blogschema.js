@@ -31,5 +31,5 @@ Description:
     }
 );
 
-const blogs=mongoose.model("blogs",blogschema);
-module.exports=blogs;
+// const blogs=mongoose.model("blogs",blogschema);
+module.exports=mongoose.model("blogs",blogschema);
