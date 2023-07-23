@@ -18,5 +18,4 @@ app.get("/",(req,res)=>
 
 {
     res.send("<h1>Hi darshan soni</h1>");
-})
-
+});
