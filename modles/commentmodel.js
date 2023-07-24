@@ -1,4 +1,5 @@
 const mongoose=require("mongoose");
+
 const commentschema=new mongoose.Schema(
     {
 
@@ -18,5 +19,6 @@ body:{
 }
     }
 );
+
 
 module.exports=mongoose.model("comment",commentschema);

@@ -18,6 +18,6 @@ const router = express.Router();
 // router.put("/unlike/:id",unlike);
 
 // router.post("/deletecomment",deletecomment);
-// router.get("/createcomment",createcomment);
+router.post("/createcomment",createcomment);
 
 module.exports=router;
