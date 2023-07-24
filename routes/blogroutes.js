@@ -1,4 +1,4 @@
-const createroute=require("../controllers/createblogs");
+const {createroute}=require("../controllers/createblogs");
 const {getblogs}=require("../controllers/getblogs");
 const {updateblogs}=require("../controllers/updateblogs");
 const {deleteblogs}=require("../controllers/deleteblogs");
