@@ -26,4 +26,6 @@ comemnt:
 
     
 });
+
+
 module.exports=mongoose.model("post",postschema);
