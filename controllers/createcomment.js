@@ -21,8 +21,12 @@ exports.createcomment=async (req,res)=>
         {$push:{comment: savecomment._id}},
         {new: true})
         .populate("comment")
+<<<<<<< HEAD
         // .exec();
-  
+
+=======
+        .exec();
+>>>>>>> f266708cd1e32001ff32860e3de8f0cadd3c8165
 
         res.json(
             {
