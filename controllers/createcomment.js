@@ -18,16 +18,20 @@ exports.createcomment=async (req,res)=>
         //find the id of new comment and save it to the post comment  array
 
        const updatedpost = await Post.findByIdAndUpdate(post,
-        {$push:{comments: savecomment._id}},
+        {$push:{comment: savecomment._id}},
         {new: true})
-        .populate("comments")
-        .exec();
+        .populate("comment")
+        // .exec();
   
 
         res.json(
             {
                 post:updatedpost,
-
+                // post:post,
+                // user:user,
+                // body:body,
+                // updatedpost:updatedpost,
+                // savecomment:savecomment
             }
         );
         
