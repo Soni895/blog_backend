@@ -1,37 +1,37 @@
-const post=require("../modles/postmodel");
+const Post=require("../modles/postmodel");
 const like=require("../modles/likemodel");
 
 exports.like=async(req,res)=>
 {
 
     try{
-        const {user,post:Post}=req.body;
-        const createlike= new like(
+        const {user,post}= req.body;
+        const createlike= await like.create(
             {
-                user,Post
+                user,post
             }
         );
-        const response= await createlike.save();
-        const update_data=await post.findByIdAndUpdate(Post,
-            {$push:{like:response._id}},
+        // const response= await createlike.save();
+        const update_post=await Post.findByIdAndUpdate(post,
+            {$push:{like:createlike._id}},
             {new: true})
-            .populate("comment")
-            .exec(); 
-
-
+            // .populate("comment")
+            // .exec(); 
 
         res.status(200).json(
             {
-                response:response,
-                update_post:update_data, 
-                status :"comment saved successfull",
+                response:createlike,
+                update_post:update_post, 
+                status :"like saved successfull",
+                user:user,
+                post:post,
             }
         )
     }
      catch(error){
         res.status(500).json(
             {
-                error:"comment not  saved",
+                error:"like not  saved",
             }
         );
     }

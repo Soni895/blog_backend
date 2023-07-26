@@ -12,7 +12,7 @@ exports.createcomment=async(req,res)=>
             }
         );
         const response= await createcomment.save();
-        const update_data=await post.findByIdAndUpdate(Post,
+        const update_post=await post.findByIdAndUpdate(Post,
             {$push:{comment:response._id}},
             {new: true})
             .populate("comment")
