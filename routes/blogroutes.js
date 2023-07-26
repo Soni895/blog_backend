@@ -14,7 +14,7 @@ router.get("/getblogs",getblogs);
 // router.put("/updateblogs",updateblogs);
 router.post("/createblogs",createblogs);
 // router.delete("/deleteblogs",deleteblogs);
-// router.put("/like/:id",like);
+router.post("/like",like);
 // router.put("/unlike/:id",unlike);
 
 // router.post("/deletecomment",deletecomment);

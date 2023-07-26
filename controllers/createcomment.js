@@ -15,8 +15,8 @@ exports.createcomment=async(req,res)=>
         const update_data=await post.findByIdAndUpdate(Post,
             {$push:{comment:response._id}},
             {new: true})
-            // .populate("comment")
-            // .exec(); 
+            .populate("comment")
+            .exec(); 
 
 
 
