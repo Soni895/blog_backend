@@ -1,6 +1,4 @@
 const post=require("../modles/postmodel");
-const { createcomment } = require("./createcomment");
-
 exports.createblogs=async function(req,res)
 {
     try {
@@ -27,9 +25,6 @@ exports.createblogs=async function(req,res)
         status:"post request unsuccessful"
 
     }
-   )
-        
+   )    
     }
-
-
 }
