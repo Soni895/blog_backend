@@ -19,5 +19,5 @@ const router = express.Router();
 
 // router.post("/deletecomment",deletecomment);
 // router.post("/createcomment",createcomment);
-// router.post('/createcomment',createcomment);
+router.post('/createcomment',createcomment);
 module.exports=router;
