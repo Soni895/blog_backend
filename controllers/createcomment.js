@@ -32,7 +32,7 @@ exports.createcomment=async(req,res)=>
      catch(error){
         res.status(500).json(
             {
-                error:"comment saved successfull",
+                error:"comment not  saved",
             }
         );
     }

@@ -28,8 +28,6 @@ const postschema= new mongoose.Schema(
             }
         ]
         
-
-
     }
 );
 
