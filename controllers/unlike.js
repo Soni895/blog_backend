@@ -1,22 +1,22 @@
 const Post=require("../modles/postmodel");
-const like=require("../modles/likemodel");
+const Like=require("../modles/likemodel");
 
 exports.unlike=async(req,res)=>
 {
 
     try{
         const {like,post}=req.body;
-      const deletelike= await like.findOneAndDelete({
-            post:Post,_id:Like
+      const deletelike= await Like.findOneAndDelete({
+            post:post,_id:like
         });
-        const deletelikefrompost= await post.findByIdAndUpdate
-        (Post,{$pull:{like:deletelike._id}},{new :true,} );
+        const udpatedPost= await Post.findByIdAndUpdate
+        (post,{$pull:{like:deletelike._id}},{new :true,} );
 
 
         res.status(200).json(
             {
           
-                update_post:deletelikefrompost, 
+                update_post:udpatedPost, 
                 status :"UnLike successfull",
             }
         )
