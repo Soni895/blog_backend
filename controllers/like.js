@@ -35,10 +35,5 @@ exports.like=async(req,res)=>
             }
         );
     }
-   
-
-
-    
-
 
 }
