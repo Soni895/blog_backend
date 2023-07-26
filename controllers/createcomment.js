@@ -24,7 +24,7 @@ exports.createcomment=async(req,res)=>
         res.status(200).json(
             {
                 response:response,
-                update_data:update_data, 
+                update_post:update_data, 
                 status :"comment saved successfull",
             }
         )
