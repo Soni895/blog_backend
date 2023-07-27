@@ -11,7 +11,7 @@ exports.updateblogs= async function(req,res)
             const response=await Post.findByIdAndUpdate(id,
                 {
                     body,title
-                });
+                },{new:true});
 
                 res.status(200).json(
                     {
