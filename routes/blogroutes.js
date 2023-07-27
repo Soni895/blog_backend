@@ -11,13 +11,12 @@ const router = express.Router();
 
 
 router.get("/getblogs",getblogs);
-// router.put("/updateblogs",updateblogs);
+router.put("/updateblogs/:id",updateblogs);
 router.post("/createblogs",createblogs);
 // router.delete("/deleteblogs",deleteblogs);
 router.post("/like",like);
 router.post("/unlike",unlike);
 
 // router.post("/deletecomment",deletecomment);
-// router.post("/createcomment",createcomment);
 router.post('/createcomment',createcomment);
 module.exports=router;
