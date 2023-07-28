@@ -8,7 +8,6 @@ const {createcomment}=require("../controllers/createcomment");
 const {deletecomment}=require("../controllers/deletecomment");
 const express = require('express');
 const router = express.Router();
-
 router.get("/getblogs",getblogs);
 router.put("/updateblogs/:id",updateblogs);
 router.post("/createblogs",createblogs);
