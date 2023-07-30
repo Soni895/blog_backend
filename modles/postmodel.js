@@ -30,5 +30,5 @@ const postschema= new mongoose.Schema(
         
     }
 );
-
-module.exports=mongoose.model("post",postschema);
+blog_post=mongoose.model("post",postschema);
+module.exports=blog_post;
