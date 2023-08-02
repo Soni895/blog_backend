@@ -5,6 +5,7 @@ app.use(express.json());
 const {db_connect}=require("./config/database");
 const port=process.env.port||4000
 const routes=require("./routes/blogroutes");
+
 app.use(express.json());
 
 // api mount
